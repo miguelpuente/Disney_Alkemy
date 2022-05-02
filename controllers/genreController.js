@@ -21,7 +21,7 @@ const addGenre = async (req, res) => {
         image: req.file.path
     }
 
-    const genre = await genre.create(info)
+    const genre = await Genre.create(info)
     res.status(200).send(genre)
     console.log(genre)
 
@@ -96,7 +96,7 @@ const upload = multer({
     limits: { fileSize: '1000000' },
     fileFilter: (req, file, cb) => {
         const fileTypes = /jpeg|jpg|png|gif/
-        const mimeType = fileTypes.test(file.mimetype)  
+        const mimeType = fileTypes.test(file.mimetype)
         const extname = fileTypes.test(path.extname(file.originalname))
 
         if(mimeType && extname) {

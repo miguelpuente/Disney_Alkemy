@@ -10,7 +10,7 @@ const Character = db.characters
 
 // main work
 
-// 1. create product
+// 1. create character
 
 const addCharacter = async (req, res) => {
 

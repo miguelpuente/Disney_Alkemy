@@ -12,8 +12,11 @@ app.use(express.urlencoded({ extended: true }))
 
 
 // routers
-const character = require('./routes/characterRouter.js')
-app.use('/characters', character)
+const { characterRouter, genreRouter, moviecharacterRouter, movieRouter} = require('./routes')
+app.use('/characters', characterRouter)
+app.use('/genres', genreRouter)
+app.use('/moviecharacters', moviecharacterRouter)
+app.use('/movies', movieRouter)
 
 //static Images Folder
 
