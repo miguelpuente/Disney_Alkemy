@@ -1,5 +1,4 @@
 const errors = require('../constants/errors');
-// const logger = require('../logger');
 
 const DEFAULT_STATUS_CODE = 500;
 
@@ -22,6 +21,5 @@ exports.handle = (error, req, res, next) => {
     res.status(DEFAULT_STATUS_CODE);
   }
   console.error(error);
-//   logger.error(error);
   return res.send({ message: error.message, internal_code: error.internalCode });
 };

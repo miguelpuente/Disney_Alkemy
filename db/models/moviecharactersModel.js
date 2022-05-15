@@ -4,10 +4,10 @@ const db = require('../config/db-config');
 
 const MovieCharacter  = db.define('moviecharacter',{
 
-    movie_id: {
+    movieId: {
         type: DataTypes.INTEGER
     },
-    character_id: {
+    characterId: {
         type: DataTypes.INTEGER
     }
 

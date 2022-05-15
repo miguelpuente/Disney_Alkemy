@@ -39,7 +39,7 @@ class Server {
         try {
 
             await db.authenticate();
-            console.log('Base de datos online');
+            console.log('Data Base online');
 
         } catch (error) {
             throw new Error( error );
@@ -75,7 +75,7 @@ class Server {
 
     listen() {
         this.app.listen( this.port, () => {
-            console.log('Servidor corriendo en puerto ', this.port );
+            console.log('Server on PORT ', this.port );
         });
     }
 }

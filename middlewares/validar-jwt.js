@@ -40,13 +40,6 @@ const validarJWT = async ( req = request, res = response, next ) => {
     }
 }
 
-// const usuarioJWT = async ( req = request, res = response) => {
-//     const token = req.header('x-token');
-//     const { uid } = jwt.verify( token, process.env.SECRETORPRIVATEKEY );
-//     const usuario = await User.findByPk( uid );
-//     res.json(usuario.id)
-// }
-
 module.exports = {
     validarJWT
 }

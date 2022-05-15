@@ -15,7 +15,7 @@ const Movie  = db.define('movie',{
     qualification: {
         type: DataTypes.TINYINT
     },
-    genre_id: {
+    genreId: {
         type: DataTypes.INTEGER
     }
 })
